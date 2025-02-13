@@ -27,7 +27,7 @@ export const Wallet = () => {
     <Pane size="sm" title="My Wallet">
       <div className="card-form">
         <div className="card-form--row">
-          <label>Card Number:</label>
+          <label htmlFor="name">Card Number:</label>
           <Input
             id="name"
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -40,7 +40,7 @@ export const Wallet = () => {
         </div>
 
         <div className="card-form--row">
-          <label>CVC:</label>
+          <label htmlFor="cvc">CVC:</label>
           <Input
             id="cvc"
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -53,7 +53,7 @@ export const Wallet = () => {
         </div>
 
         <div className="card-form--row">
-          <label>Expiration:</label>
+          <label htmlFor="expiration">Expiration:</label>
           <Input
             id="expiration"
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
