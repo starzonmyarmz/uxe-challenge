@@ -16,6 +16,7 @@ export const Input = ({
   placeholder = "",
   type = "text",
   value,
+  ...rest
 }: InputProps) => {
   return (
     <input
@@ -25,6 +26,7 @@ export const Input = ({
       placeholder={placeholder}
       type={type}
       value={value}
+      {...rest}
     />
   )
 }
