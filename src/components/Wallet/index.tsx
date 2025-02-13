@@ -35,6 +35,7 @@ export const Wallet = () => {
             }
             placeholder="1111 1111 1111 1111"
             type="text"
+            inputMode="numeric"
             value={number}
           />
         </div>
@@ -48,6 +49,7 @@ export const Wallet = () => {
             }
             placeholder="xxx"
             type="text"
+            inputMode="numeric"
             value={cvc}
           />
         </div>
