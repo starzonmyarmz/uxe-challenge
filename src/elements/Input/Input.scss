@@ -9,3 +9,7 @@
 .input::placeholder {
   color: var(--color-gray-400);
 }
+
+.input:focus-visible {
+  color: var(--color-blue-900);
+}

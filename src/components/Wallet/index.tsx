@@ -65,23 +65,29 @@ export const Wallet = () => {
           />
         </div>
 
-        <div className="card-type">
-          <p>Card Type:</p>
+        <fieldset className="card-type">
+          <legend>Card Type:</legend>
           <div className="card-type--options">
-            <div
-              onClick={() => setType("credit")}
-              className={`${type === "credit" ? "selected" : ""}`}
-            >
+            <label>
+              <input
+                type="radio"
+                onChange={() => setType("credit")}
+                className={`${type === "credit" ? "selected" : ""}`}
+                checked={type === "credit"}
+              />
               Credit
-            </div>
-            <div
-              onClick={() => setType("debit")}
-              className={`${type === "debit" ? "selected" : ""}`}
-            >
+            </label>
+            <label>
+              <input
+                type="radio"
+                onChange={() => setType("debit")}
+                className={`${type === "debit" ? "selected" : ""}`}
+                checked={type === "debit"}
+              />
               Debit
-            </div>
+            </label>
           </div>
-        </div>
+        </fieldset>
         <Button onClick={handleAddCard} text="Add Card" />
       </div>
 

@@ -19,9 +19,10 @@
 }
 
 .card-type {
+  border: 0;
   margin: 1em 0;
 
-  p {
+  legend {
     color: var(--color-gray-600);
     margin-bottom: 0.5em;
   }
@@ -29,11 +30,12 @@
   .card-type--options {
     display: flex;
 
-    div {
+    label {
       background: var(--color-gray-200);
       color: var(--color-gray-500);
       cursor: pointer;
       padding: 0.5em 0.75em;
+      position: relative;
 
       &:first-child {
         border-radius: 8px 0 0 8px;
@@ -43,9 +45,19 @@
         border-radius: 0 8px 8px 0;
       }
 
-      &.selected {
+      &:has(input:checked) {
         background: var(--color-green-600);
         color: #fff;
+      }
+
+      &:has(input:focus-visible) {
+        outline: 2px solid var(--color-blue-900);
+        z-index: 2;
+      }
+
+      input {
+        opacity: 0;
+        position: absolute;
       }
     }
   }
@@ -76,7 +88,7 @@
     display: flex;
     justify-content: center;
     padding: 0 0.75em;
-    
+
     svg {
       display: block;
       height: 24px;
