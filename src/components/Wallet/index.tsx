@@ -91,25 +91,25 @@ export const Wallet = () => {
         <Button onClick={handleAddCard} text="Add Card" />
       </div>
 
-      <div className="cards-list">
-        {cards.map((card, index) => {
+      <ol className="cards-list">
+        {cards.map(({ type, number, cvc, expiration }, index) => {
           return (
-            <div className="card" key={index}>
+            <li className="card" key={index}>
               <div className="card--icon">
-                {card.type === "credit" ? <CreditCard /> : <DebitCard />}
+                {type === "credit" ? <CreditCard /> : <DebitCard />}
               </div>
 
               <div className="card--details">
-                <h2 className="card--number">{card.number}</h2>
+                <h2 className="card--number">{number}</h2>
                 <div className="flex">
-                  <p className="card--cvc">{card.cvc}</p>
-                  <p className="card--expiration">{card.expiration}</p>
+                  <p className="card--cvc">{cvc}</p>
+                  <p className="card--expiration">{expiration}</p>
                 </div>
               </div>
-            </div>
+            </li>
           )
         })}
-      </div>
+      </ol>
     </Pane>
   )
 }
