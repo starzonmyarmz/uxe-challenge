@@ -4,6 +4,7 @@ import "./Button.scss"
 
 type BaseButtonProps = {
   onClick: () => void
+  className?: string
   size?: "sm" | "md" | "lg"
   variant?: "filled" | "outline"
 }
@@ -22,6 +23,7 @@ type ButtonProps = TextButtonProps | ChildrenButtonProps
 
 export const Button = ({
   children,
+  className = "",
   onClick,
   size = "md",
   variant = "filled",
@@ -31,7 +33,7 @@ export const Button = ({
   return (
     <button
       onClick={onClick}
-      className={`button button--${size} button--${variant}`}
+      className={`button button--${size} button--${variant} ${className}`}
       {...restProps}
     >
       {text || children}
