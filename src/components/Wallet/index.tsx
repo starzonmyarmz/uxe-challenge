@@ -93,15 +93,15 @@ export const Wallet = () => {
         <Button onClick={handleAddCard} text="Add Card" />
       </div>
 
-      <ol className="cards-list">
+      <ol className="slats-list">
         {cards.map(({ type, number, cvc, expiration }, index) => {
           return (
-            <li className="card" key={index}>
-              <div className="card--icon">
+            <li className="slat" key={index}>
+              <div className="slat--icon">
                 {type === "credit" ? <CreditCard /> : <DebitCard />}
               </div>
 
-              <div className="card--details">
+              <div className="slat--details">
                 <h2 className="card--number">{number}</h2>
                 <div className="flex">
                   <p className="card--cvc">{cvc}</p>
