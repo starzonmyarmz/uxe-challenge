@@ -2,6 +2,7 @@ import { ChangeEvent, useState } from "react"
 import { Button } from "../../elements/Button"
 import { Input } from "../../elements/Input"
 import { Pane } from "../../elements/Pane"
+import { Currency } from "../../utils/Currency"
 import { VisuallyHidden } from "../../utils/VisuallyHidden"
 import {
   Add,
@@ -14,15 +15,6 @@ import {
 } from "../../icons"
 
 import "./Budget.scss"
-
-// Lets format our numbers using a decorator so
-// that we can use numbers in our data in case we
-// want to do some math later on!
-const numFormat = new Intl.NumberFormat("default", {
-  style: "currency",
-  currency: "USD",
-  maximumFractionDigits: 0,
-})
 
 const summary = [
   {
@@ -112,7 +104,9 @@ export const Budget = () => {
             {summary.map(({ name, amount }, index) => (
               <li key={index}>
                 {name}
-                <h2 className="mt-05">{numFormat.format(amount)}</h2>
+                <h2 className="mt-05">
+                  <Currency amount={amount} />
+                </h2>
               </li>
             ))}
           </ul>
@@ -124,7 +118,7 @@ export const Budget = () => {
                 <div className="slat--icon">{icon}</div>
                 <div className="slat--details flex flex-between flex-baseline">
                   <h3 className="slat--title">{name}</h3>
-                  {numFormat.format(amount)}
+                  <Currency amount={amount} />
                 </div>
               </li>
             ))}
