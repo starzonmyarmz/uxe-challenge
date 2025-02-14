@@ -6,10 +6,12 @@ import {
   IoWallet,
   IoReaderOutline,
   IoReader,
+  IoAdd,
 } from "react-icons/io5"
 import { BsBarChartLine, BsBarChartLineFill } from "react-icons/bs"
 import { MdFitnessCenter, MdLocalDining } from "react-icons/md"
 import { TbChefHat } from "react-icons/tb"
+import { PiPantsFill } from "react-icons/pi"
 
 export {
   FaCreditCard as CreditCard,
@@ -25,4 +27,6 @@ export {
   MdFitnessCenter as HealthFitness,
   MdLocalDining as DiningOut,
   TbChefHat as Food,
+  IoAdd as Add,
+  PiPantsFill as Clothing,
 }
