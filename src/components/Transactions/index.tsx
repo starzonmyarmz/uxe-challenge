@@ -1,8 +1,8 @@
 import { useTransactions } from "../../hooks/use_transactions"
 import { Pane } from "../../elements/Pane"
+import { Currency } from "../../utils/Currency"
 
 import "./Transactions.scss"
-import { Currency } from "../../utils/Currency"
 
 export const Transactions = () => {
   const { transactions, calculateBalance } = useTransactions()
