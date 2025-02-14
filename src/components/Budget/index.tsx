@@ -117,7 +117,7 @@ export const Budget = () => {
               <li key={index} className="slat">
                 <div className="slat--icon">{icon}</div>
                 <div className="slat--details flex flex-between flex-baseline">
-                  <h3 className="slat--title">{name}</h3>
+                  <h3 className="slat--title wght-normal">{name}</h3>
                   <Currency amount={amount} />
                 </div>
               </li>
