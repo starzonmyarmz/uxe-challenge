@@ -1,1 +1,29 @@
-// add styles for "budget categories"
+@use "../../global/styles/radio_choice";
+@use "../../global/styles/slats";
+
+.budget-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2em;
+  text-align: center;
+}
+
+.categories-title {
+  color: var(--color-gray-600);
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.category-form--row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.category-form--actions {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 2em;
+}

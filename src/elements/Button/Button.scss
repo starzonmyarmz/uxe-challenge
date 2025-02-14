@@ -6,7 +6,8 @@
   display: inline-flex;
   flex: 1 1 auto;
   font-weight: 500;
-  justify-content: space-between;
+  gap: 0.5em;
+  justify-content: center;
   text-align: center;
   width: auto;
 }
@@ -28,7 +29,7 @@
 
 .button--filled {
   background: var(--color-brand);
-  border:1px solid var(--color-brand);
+  border: 1px solid var(--color-brand);
   color: #fff;
 
   &:hover {
