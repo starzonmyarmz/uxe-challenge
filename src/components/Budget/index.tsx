@@ -118,7 +118,9 @@ export const Budget = () => {
                 <div className="slat--icon">{icon}</div>
                 <div className="slat--details flex flex-between flex-baseline">
                   <h3 className="slat--title wght-normal">{name}</h3>
-                  <Currency amount={amount} />
+                  <p>
+                    <Currency amount={amount} />
+                  </p>
                 </div>
               </li>
             ))}

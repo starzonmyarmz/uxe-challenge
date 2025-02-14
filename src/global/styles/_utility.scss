@@ -30,10 +30,18 @@
   justify-content: space-between;
 }
 
+.flex-middle {
+  align-items: center;
+}
+
 .flex-baseline {
   align-items: baseline;
 }
 
 .wght-normal {
   font-weight: normal;
+}
+
+.gap-05 {
+  gap: 0.5em;
 }

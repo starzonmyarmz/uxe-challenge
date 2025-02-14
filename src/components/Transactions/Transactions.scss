@@ -1,1 +1,20 @@
-// add styles for "transactions"
+@use "../../global/styles/slats";
+
+.transaction--date {
+  color: var(--color-gray-400);
+  font-size: 14px;
+  margin-top: 0.5em;
+}
+
+.transaction--category {
+  color: var(--color-gray-400);
+  font-size: 14px;
+}
+
+.transaction--positive {
+  color: var(--color-green-600);
+}
+
+.transaction--negative {
+  color: var(--color-red-600);
+}

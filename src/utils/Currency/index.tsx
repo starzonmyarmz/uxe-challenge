@@ -1,17 +1,14 @@
 type CurrencyProps = {
   amount: number
+  includeCents?: boolean
 }
 
-const numFormat = new Intl.NumberFormat("default", {
-  style: "currency",
-  currency: "USD",
-  maximumFractionDigits: 0,
-})
+export const Currency = ({ amount, includeCents }: CurrencyProps) => {
+  const numFormat = new Intl.NumberFormat("default", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: includeCents ? 2 : 0,
+  })
 
-export const Currency = ({ amount }: CurrencyProps) => {
-  return (
-    <>
-      {numFormat.format(amount)}
-    </>
-  )
+  return <>{numFormat.format(amount)}</>
 }
