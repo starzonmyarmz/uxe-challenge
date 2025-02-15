@@ -16,6 +16,15 @@ import {
 
 import "./Budget.scss"
 
+const icons = {
+  diningout: DiningOut,
+  food: Food,
+  healthandfitness: HealthFitness,
+  housing: Housing,
+  transportation: Transportation,
+  clothing: Clothing,
+}
+
 const summary = [
   {
     name: "Monthly Income",
@@ -94,6 +103,27 @@ export const Budget = () => {
   const [name, setName] = useState("")
   const [category, setCategory] = useState("")
   const [limit, setLimit] = useState("")
+
+  // Cancel form submission
+  function resetForm() {
+    setName("")
+    setCategory("")
+    setLimit("")
+    setBudgetState("budget")
+  }
+
+  // Submit form
+  function submitForm() {
+    const Icon = icons[category.toLowerCase().replace(/\s/g, "")]
+
+    categories.push({
+      name: name,
+      icon: <Icon aria-hidden="true" />,
+      limit: limit,
+    })
+
+    resetForm()
+  }
 
   return (
     <>
@@ -193,12 +223,12 @@ export const Budget = () => {
               <Button
                 text="Cancel"
                 variant="outline"
-                onClick={() => setBudgetState("budget")}
+                onClick={resetForm}
                 className="w-100%"
               />
               <Button
                 text="Add new category"
-                onClick={() => setBudgetState("budget")}
+                onClick={submitForm}
                 className="w-100%"
               />
             </div>
