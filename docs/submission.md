@@ -26,6 +26,8 @@ Lastly, I noted the inconsistent placement of labels (credit card radio buttons 
 
 I noticed some inconsistencies in the placement of form labels and the use of colons in labels across forms. I aligned the Category form with the Credit Card form for consistency, improving the overall user experience and making the design more cohesive.
 
+**Update:** I made the Budget form fully functional—now, when submitted, it adds the new category to the categories array. Since I implemented this after the 48-hour time limit, and I’m unsure how strictly that rule is enforced, I pushed the changes to a new branch just in case: https://github.com/starzonmyarmz/uxe-challenge/tree/form-submission.
+
 
 ### Task 3: Refactor to add visual hierarchy
 
