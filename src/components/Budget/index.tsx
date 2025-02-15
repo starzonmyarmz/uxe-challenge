@@ -34,27 +34,27 @@ const summary = [
 const categories = [
   {
     name: "Transportation",
-    amount: 400,
+    limit: 400,
     icon: <Transportation aria-hidden="true" />,
   },
   {
     name: "Housing",
-    amount: 1500,
+    limit: 1500,
     icon: <Housing aria-hidden="true" />,
   },
   {
     name: "Food",
-    amount: 500,
+    limit: 500,
     icon: <Food aria-hidden="true" />,
   },
   {
     name: "Dining Out",
-    amount: 500,
+    limit: 500,
     icon: <DiningOut aria-hidden="true" />,
   },
   {
     name: "Health and Fitness",
-    amount: 200,
+    limit: 200,
     icon: <HealthFitness aria-hidden="true" />,
   },
 ]
@@ -113,13 +113,13 @@ export const Budget = () => {
 
           <h2 className="categories-title">Categories</h2>
           <ol className="slats-list">
-            {categories.map(({ amount, icon, name }, index) => (
+            {categories.map(({ limit, icon, name }, index) => (
               <li key={index} className="slat">
                 <div className="slat--icon">{icon}</div>
                 <div className="slat--details flex flex-between flex-baseline">
                   <h3 className="slat--title wght-normal">{name}</h3>
                   <p>
-                    <Currency amount={amount} />
+                    <Currency amount={limit} />
                   </p>
                 </div>
               </li>
